@@ -322,6 +322,7 @@ class VoxScene:
         self.print(f'{Nbt=}')
 
         #clean up shared memory
+        del Nb_proc
         Nb_proc_shm.close()
         Nb_proc_shm.unlink()
         #self.print(f'unlink')

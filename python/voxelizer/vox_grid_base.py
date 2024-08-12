@@ -186,6 +186,9 @@ class VoxGridBase:
             N_tribox_tests_tot = np.sum(N_tribox_tests)
             self.print(f'tribox checks={N_tribox_tests_tot} for {Ntris} tris and {Nvox} vox ({N_tribox_tests_tot/(Nvox*Ntris)*100.0:.2f} %)')
 
+            del Ntris_vox
+            del N_tribox_tests
+
             #cleanup shared memory
             Ntris_vox_shm.close()
             Ntris_vox_shm.unlink()
